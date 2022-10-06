@@ -1,0 +1,351 @@
+/*********************************/
+/**----- ELEMENTS GENERAUX -----**/
+/*********************************/
+:root{
+    --mainDarkColor: rgb(19, 19, 53);
+    --mainLightColor: rgb(185, 160, 14);
+    --neutralColor: rgba(124, 124, 122, 0.918);
+}
+body{
+    background: url(../img/backgroundCellar.jpg) center center / cover;
+    background-attachment: fixed;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 0.7rem;
+    font-style: italic;
+    text-shadow: 0.3px 0.3px 1px rgb(204, 193, 193);
+}
+
+h1{
+    font-family: 'Italianno', cursive;
+    font-size: 2.2rem;
+    font-style: normal;
+    letter-spacing: 0.2rem;
+    color: var(--mainDarkColor);
+    text-align: center;
+    background: linear-gradient(to left,transparent 30%, rgba(128, 128, 128, 0.623),rgba(128, 128, 128, 0.801), transparent 70%);
+}
+h2, h3{
+    font-style: normal;
+    margin: 0;
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+    color: var(--mainDarkColor);
+    text-align: center;
+}
+h3{
+    margin-bottom: 2rem;
+}
+span{
+    font-weight: bolder;
+    color: var(--mainLightColor);
+    text-shadow: 1px 1px 1px rgb(10, 10, 10);
+}
+
+/* menu de navigation */
+nav{
+    text-align: center;
+    font-style: italic;
+    font-size: 1.1rem;
+    background-color: var(--mainDarkColor);
+    padding: 1vh;
+    border-bottom-left-radius: 90%;
+    border-bottom-right-radius: 90%;
+    box-shadow: 2px 2px 1px rgb(116, 121, 180);
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0.2rem;
+    margin-top: 0;
+}
+nav li, nav a{
+    padding: 1vh;
+    list-style-type: none;
+    text-decoration: none;
+    color: var(--mainLightColor);
+    transition: transform 0.7s;
+}
+nav a:hover, nav li:hover{
+    transform: scale(1.1);
+    transition: transform 0.7s;
+    color: rgb(231, 231, 12);
+}
+
+/* footer */
+#footer{
+    margin-top: 1rem;
+    background-color: var(--mainDarkColor);
+    display: absolute;
+    bottom: 0;
+    text-align: center;
+    color: var(--mainLightColor);
+}
+#footer p {
+    margin: 0;
+    padding: 2rem;
+    font-size: 1rem;
+}
+/* container */
+.container{
+    text-align:center;
+}
+
+/*********************************/
+/**- TABLEAUX DE PRESENTATION --**/
+/*********************************/
+table{
+    background-color: var(--neutralColor);
+    border: 1px white solid;
+    border-radius: 20px;
+    font-size: 1rem;
+    text-align: center;
+    margin: auto;
+}
+table tr{
+    padding: 0;
+}
+table th{
+    font-weight: normal;
+    background-color:var(--mainDarkColor);
+    color: var(--mainLightColor);
+    border-radius: 20px;
+    padding: 0.1rem 0.5rem;
+}
+table td {
+    max-width:fit-content;
+}
+tbody tr:nth-child(even){
+    background-color: rgba(83, 74, 74, 0.637);
+}
+
+/*********************************/
+/**---------  BOUTONS  ---------**/
+/*********************************/
+button{
+    max-height: 1.6rem;
+    border-radius: 0 20%;
+    background-color: var(--neutralColor);
+    color: var(--mainDarkColor);
+    border: 2.2px solid var(--mainDarkColor);
+    padding: 0.4rem 1.1rem 1.1rem 1.1rem;
+    font-style: italic;
+}
+button:hover{
+    color: var(--mainLightColor);
+}
+button#btnReturn{
+    margin-left: 50vw;
+    margin: 3rem 0 3rem 60vw;
+}
+button.validate{
+    background-color: rgb(11, 100, 11);
+    color: var(--mainLightColor);
+    font-weight: bolder;
+}
+button.return{
+    color: var(--mainLightColor);
+    font-weight: bolder;
+    margin-left: 10rem;
+}
+button.validate:hover{
+    background-color: var(--mainLightColor);
+    color: green;
+}
+button.return:hover{
+    background-color: var(--mainLightColor);
+    color: var(--mainDarkColor);
+}
+
+table button{
+    background-color: transparent;
+    border: none;
+}
+table button:hover {
+    text-shadow: 1px 1px 1px rgb(175, 162, 162);
+} 
+button.fa-pencil-alt{
+    color: rgb(146, 84, 2) ;
+    text-shadow: 0.4px 0.4px 1px rgb(20, 20, 20);
+    margin: 0;
+    padding: 0 0.3rem;
+}
+button.fa-trash-alt{
+    color: rgb(173, 4, 4);
+    text-shadow: 0.4px 0.4px 1px rgb(20, 20, 20);
+    margin: 0;
+    padding: 0 0.3rem;
+}
+button.fa-eye{
+    color: rgb(0, 145, 0);
+    text-shadow: 0.4px 0.4px 1px rgb(20, 20, 20);
+    margin: 0;
+    padding: 0 0.3rem;
+}
+aside button{
+    margin: 1rem;
+}
+#mainDisplayRef button{
+    margin: 1rem 3.7rem;
+}
+#mainDisplayRef button, aside button {
+    padding: 0.2rem 1rem;
+    font-weight: bolder;
+    background-color: var(--mainLightColor);
+    border: 2px solid var(--mainDarkColor);
+    border-bottom-right-radius: 40%;
+    border-top-left-radius: 40%;
+}
+#mainDisplayRef button:hover, aside button:hover {
+    background-color: var(--mainDarkColor);
+    color: var(--mainLightColor);
+}
+button[value^='add']{
+    margin: 0.5rem;
+    border-radius: 13%;
+    color: var(--mainDarkColor);
+    background-color: var(--mainLightColor);
+}
+/*********************************/
+/**----   INPUT & TEXTAREA -----**/
+/*********************************/
+input, select{
+    margin: 1rem;
+    padding: 0.3rem;
+    background-color: rgb(223, 219, 219);
+    color: var(--mainDarkColor);
+    font-weight: bold;
+    border-radius: 20px;
+    text-align: center;
+}
+section input[disabled]{
+    color: rgb(128, 126, 126);
+    background-color: rgb(39, 38, 38);
+}
+input:focus{
+    background-color: rgb(236, 228, 228);
+}
+textarea{
+    width: 40vw;
+    height: 10vh;
+    background-color: rgb(223, 219, 219);
+    border: 1px solid grey;
+    border-radius: 10px;
+    vertical-align: middle;
+}
+/*********************************/
+/**-----   ASIDE & SECTION -----**/
+/*********************************/
+#containerRef{
+    display: flex;
+    min-height: 64vh;
+}
+#containerRef section {
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+    justify-content:center;
+    align-items: center;
+}
+section div{
+    font-size: 1.4rem;
+    margin: 1rem;
+}
+
+#containerRef #mainDisplayRef {
+    display: flex;
+    flex-grow: 2;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+aside{
+    background: var(--mainDarkColor);
+    border-radius: 20%;
+    margin-top: 4rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: min-content;
+}
+#wineDisplay section{
+    display: flex;
+    margin: auto;
+    width: 70vw;
+    padding: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
+}
+
+#containerRef section{
+    margin-top: 2rem;
+    opacity: 0;
+    animation: animationTable 700ms forwards;
+}
+/*********************************/
+/**---------- IMAGES -----------**/
+/*********************************/
+#imgIndex {
+    height: 60vh; 
+    width: 70vw;
+    margin: 2rem;
+    border-bottom-left-radius: 20%;
+    border-radius: 2% 30%;
+    border: 3px solid rgba(128, 128, 128, 0.541);
+    animation: animationImg 2s;
+}
+@keyframes animationImg {
+    0%{
+        opacity: 0.2;
+        transform: scale(0) translate(-100%, 40%);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes animationTable {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/*********************************/
+/**------   MEDIA QUERIES ------**/
+/*********************************/
+@media (max-width: 400px) {
+    #containerRef section{
+        margin : 0;
+        padding: 0;
+    }
+    #tabWine th{
+        padding: 0;
+        font-size: 0.8rem;
+    }
+    section{
+        margin: auto;
+    }  
+}
+@media (max-width: 660px) {
+    aside {
+        display: none;
+    }
+    #tabWine{
+        margin: auto;       
+    }
+    #tabWine td:nth-of-type(7), #tabWine td:nth-of-type(6), #tabWine td:nth-of-type(5), #tabWine td:nth-of-type(4){
+        display: none;
+    }
+    #tabWine th:nth-of-type(7), #tabWine th:nth-of-type(6), #tabWine th:nth-of-type(5), #tabWine th:nth-of-type(4){
+        display: none;
+    }
+    
+}
